@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container1 {
+        background-color: #042e3c;
+      }
+      #nav1 {
+        display: flex;
+        height: 50px;
+        width: 100%;
+        border: 1px solid red;
+        justify-content: flex-end;
+        margin: auto;
+      }
+      #nav1child1 {
+        display: flex;
+        border: 1px solid rgb(0, 255, 157);
+        height: 100%;
+        width: 30%;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #nav1child1 > div {
+        align-content: center;
+        align-items: center;
+        color: rgb(17, 179, 190);
+      }
+      #nav2 {
+        display: flex;
+        justify-content: space-around;
+        height: 70px;
+        width: 100%;
+        border: 1px solid teal;
+      }
+      #nav2child2 {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+      }
+      .textCenter {
+        padding: auto;
+      }
+      #top {
+        border: 1px solid red;
+        height: 300px;
+        width: 70%;
+        margin: auto;
+        padding-top: 100px;
+        text-align: center;
+      }
+      #topButton {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      #mid {
+        height: auto;
+        width: 90%;
+        margin: auto;
+        border: 1px solid red;
+      }
+      #mid2 {
+        height: auto;
+        width: 60%;
+        margin: auto;
+        text-align: center;
+      }
+      #container1 h1,
+      h3,
+      p {
+        color: white;
+      }
+
+      #container2 {
+        background-color: #f4fbfc;
+        text-align: center;
+      }
+      #container2mid {
+        display: flex;
+        height: auto;
+        width: 90%;
+        margin: auto;
+      }
+      #container2mid2 {
+        text-align: center;
+      }
+      #container2top {
+        border: 1px solid red;
+      }
+      #container2topchild1 {
+        border: 1px solid red;
+      }
+      #container2bottam {
+        height: auto;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 15% 15% 15% 15% 15%;
+        grid-template-rows: repeat(2, 1fr);
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container1">
+      <div id="nav1">
+        <div id="nav1child1">
+          <div class="textCenter"><p>Privacy Center</p></div>
+          <div class="textCenter"><p>Support</p></div>
+          <div class="textCenter"><p>Login</p></div>
+        </div>
+      </div>
+      <div id="nav2">
+        <div id="nav2child1">
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/6081a538174f4d6bc01bdd27_leadiq-logo.svg"
+          />
+        </div>
+        <div id="nav2child2">
+          <div id="pal"><p>Platform</p></div>
+          <div><p>Success Stories</p></div>
+          <div><p>Resources</p></div>
+          <div><p>Pricing</p></div>
+        </div>
+        <div id="nav2child3">
+          <button>Book a demo</button>
+        </div>
+      </div>
+      <div id="top">
+        <div><h1>Prospecting that's Personal</h1></div>
+        <div><h3>Track sales triger</h3></div>
+        <div id="topButton">
+          <div><button>Book a demo</button></div>
+          <div><button>Start free</button></div>
+        </div>
+      </div>
+      <div id="mid">
+        <!-- <iframe
+          width="400px"
+          height="350px"
+          src="https://youtu.be/vj3lYJJJIU0"
+        ></iframe> -->
+        <img
+          src="https://embed-ssl.wistia.com/deliveries/cfde895b5b6e3ad4e2d94fdba605c546.webp?image_crop_resized=1280x720"
+          alt="Error"
+        />
+      </div>
+      <div id="mid2">
+        <div><h1>Too many sellers, send too many messages</h1></div>
+        <div>
+          <p>The world has never before been this noisy</p>
+        </div>
+      </div>
+      <div id="bottom">
+        <img
+          src="https://assets.website-files.com/60819f9be381394642b5659e/631a3251de5c6f228f20bd7a_world-noise.svg"
+        />
+      </div>
+    </div>
+
+    <div id="container2">
+      <div id="container2top">
+        <div id="container2topchild1">
+          <h1>Build sales pipeline smarter with the LeadIQ platform</h1>
+        </div>
+        <div>
+          <button>Book a demo</button>
+        </div>
+      </div>
+
+      <div id="container2mid">
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/63175e48773cbb3df9e0fcaf_identify-prospect-data.svg"
+          />
+          <h2>Identify prospect data</h2>
+          <h5>
+            Find, capture, and sync contact data to your system of record
+            faster.
+          </h5>
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/63175e49615f15440015f8b7_track-sales-triggers.svg"
+          />
+          <h2>Track sales triggers</h2>
+          <h5>
+            Identify the right time to reach out to key accounts and buyers for
+            warmer outreach.
+          </h5>
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/63175e480a2e474afbe0db64_compose-personal-messages.svg"
+          />
+          <h2>Compose personal messages arr</h2>
+          <h5>
+            Generate tailored, complete sales messages in seconds — and stand
+            above your competition.
+          </h5>
+        </div>
+      </div>
+      <div id="container2mid2">
+        <h2>Top sales teams have adopted the LeadIQ way</h2>
+      </div>
+      <div id="container2bottam">
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/62dc231d48e94804b0b8f925_Clari-Logo.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/62de9a7d43f2284e2cdfcbd1_Sigma-Logo.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/62dc231d6aace7cb07bf9a65_Optimizely-Logo.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/631a2023b91dcb72ce9fdd11_smartly-Logo.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/62dc231d4cf8133d1bdc1802_Walkme-Logo.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/62de9a8cf4adedd09de5ba18_Mulesoft-Logo.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/62de9ac3c3d0755d92ab84b5_Sitecore-Logo.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/62dc231d3103180f92b30e0a_Segment-Logo.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/62de9a9eab5726114cd70158_Liveperson-Logo.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="https://assets.website-files.com/60819f9be381394642b5659e/62dc231d8642e948ae1fd974_Bynder-Logo.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  //   let plat = document.getElementById("#pal");
+  //   let arr = ["lsdkbck", "kbsdcjk", "ljhsdc"];
+  //   let i = 0;
+  //   let d = setInterval(function () {
+  //     // console.log("I am after some time");
+
+  //     console.log("interval", arr[i], i);
+
+  //     i++;
+  //     if (i == arr.length) {
+  //       clearInterval(d);
+  //       i = 0;
+  //     }
+  //   }, 3000);
+</script>
