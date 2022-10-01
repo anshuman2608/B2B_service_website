@@ -126,19 +126,30 @@
             <label class="form" for=""><h1>Full Name</h1></label>
           </div>
           <div>
-            <input class="inputBox" type="text" placeholder="Full name" />
+            <input
+              id="name"
+              class="inputBox"
+              type="text"
+              placeholder="Full name"
+            />
           </div>
           <div>
             <label class="form"><h1>Email</h1></label>
           </div>
           <div>
-            <input class="inputBox" type="email" placeholder="Enter Email" />
+            <input
+              id="email"
+              class="inputBox"
+              type="email"
+              placeholder="Enter Email"
+            />
           </div>
           <div>
             <label class="form"><h1>Password</h1></label><br />
           </div>
           <div>
             <input
+              id="pass"
               class="inputBox"
               type="password"
               placeholder="Enter Password"
@@ -155,14 +166,35 @@
             />
           </div>
           <div>
-            <input type="submit" value="Continue" class="btn" />
+            <input id="submit" type="submit" value="Continue" class="btn" />
           </div>
         </form>
       </div>
       <div id="bottom">
         <h3>Already a user?</h3>
-        <button>Login</button>
+        <button id="btn2">Login</button>
       </div>
     </div>
   </body>
 </html>
+
+<script>
+  document.querySelector("#btn2").addEventListener("click", gologin);
+  function gologin() {
+    window.location.href = "login.html";
+  }
+
+  document.querySelector("#submit").addEventListener("click", setData);
+
+  function setData(event) {
+    event.preventDefault();
+    let fullName = document.querySelector("#name").value;
+    localStorage.setItem("name", fullName);
+    let emailId = document.querySelector("#email").value;
+    localStorage.setItem("email", emailId);
+    let password = document.querySelector("#pass").value;
+    localStorage.setItem("pass", password);
+    document.querySelector("#submit").value = "Thanks for sign up";
+    window.location.href = "login.html";
+  }
+</script>
