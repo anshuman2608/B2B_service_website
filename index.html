@@ -116,13 +116,13 @@
         display: flex;
         height: 50px;
         width: 100%;
-        border: 1px solid red;
+
         justify-content: flex-end;
         margin: auto;
       }
       #nav1child1 {
         display: flex;
-        border: 1px solid rgb(0, 255, 157);
+
         height: 100%;
         width: 30%;
         justify-content: space-evenly;
@@ -149,7 +149,6 @@
         padding: auto;
       }
       #top {
-        border: 1px solid red;
         height: 300px;
         width: 70%;
         margin: auto;
@@ -179,6 +178,9 @@
       p {
         color: white;
       }
+      h1 {
+        font-size: 40px;
+      }
 
       #container2 {
         background-color: #f4fbfc;
@@ -197,10 +199,8 @@
         text-align: center;
       }
       #container2top {
-        border: 1px solid red;
       }
       #container2topchild1 {
-        border: 1px solid red;
       }
       #container2bottam {
         height: auto;
@@ -221,6 +221,13 @@
         justify-content: space-around;
         background-color: #ccc;
       }
+      button {
+        height: auto;
+        width: auto;
+        padding: 12px;
+        background-color: #ffd265;
+        border-radius: 5px;
+      }
     </style>
   </head>
   <body>
@@ -229,7 +236,7 @@
         <div id="nav1child1">
           <div class="textCenter"><p>Privacy Center</p></div>
           <div class="textCenter"><p>Support</p></div>
-          <div class="textCenter"><p>Login</p></div>
+          <div class="textCenter"><p id="loginHome">Login</p></div>
         </div>
       </div>
       <div id="nav2">
@@ -263,12 +270,12 @@
                   <a href="#">Link 3</a>
                 </div>
                 <div class="column">
-                  <iframe
+                  <i
                     src="https://www.youtube.com/embed/aOliIfyH6vI"
                     height="200"
                     width="300"
                     title="Iframe Example"
-                  ></iframe>
+                  ></i>
                 </div>
               </div>
             </div>
@@ -470,4 +477,24 @@
   //       i = 0;
   //     }
   //   }, 3000);
+
+  // Local storage set Up
+
+  // let email = "U@jg.vom";
+
+  // function set_to_local(key, data) {
+  //   localStorage.setItem(key, data);
+  // }
+
+  // function get_from_local(key) {
+  //   let data = localStorage.getItem(key);
+  //   return data;
+  // }
+
+  // set_to_local("email", email);
+  // let mylocal = get_from_local("email");
+  document.querySelector("#loginHome").addEventListener("click", gologin);
+  function gologin() {
+    window.location.href = "login.html";
+  }
 </script>

@@ -93,23 +93,52 @@
             <label><h1>Email</h1></label>
           </div>
           <div>
-            <input class="inputBox" type="email" placeholder="Enter Email" />
+            <input
+              id="emailInput"
+              class="inputBox"
+              type="email"
+              placeholder="Enter Email"
+            />
           </div>
           <div>
             <label><h1>Password</h1></label><br />
           </div>
           <div>
             <input
+              id="passwordInput"
               class="inputBox"
               type="password"
               placeholder="Enter Password"
             />
           </div>
           <div class="form">
-            <input type="submit" value="Login" class="btn" />
+            <input id="login1" type="submit" value="Login" class="btn" />
           </div>
         </form>
       </div>
     </div>
   </body>
 </html>
+<script>
+  document.querySelector("#btn1").addEventListener("click", gosignup);
+  function gosignup() {
+    window.location.href = "signup.html";
+  }
+
+  document.querySelector("#login1").addEventListener("submit", getData);
+
+  function getData() {
+    event.preventDefault();
+    //let text1 = localStorage.getItem("pass");
+    //console.log(text1);
+    let emailIn = document.querySelector("#emailInput");
+    let emailOrg = localStorage.getItem("email");
+    let passwordIn = document.querySelector("#passwordInput");
+    let passwordOrg = localStorage.getItem("pass");
+    if (emailIn == emailOrg && passwordIn == passwordOrg) {
+      window.location.href = "index.html";
+    } else {
+      document.querySelector("#login1").value = "Worng Id or Password";
+    }
+  }
+</script>
