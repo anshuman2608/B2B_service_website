@@ -4,8 +4,111 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>LeadIQ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: teal;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: red;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        width: 100%;
+        left: 0;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content .header {
+        background: red;
+        padding: 16px;
+        color: white;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        background-color: #ccc;
+        height: 250px;
+      }
+
+      .column a {
+        float: none;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .column a:hover {
+        background-color: #ddd;
+      }
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          height: auto;
+        }
+      }
+
       #container1 {
         background-color: #042e3c;
       }
@@ -59,10 +162,11 @@
         gap: 20px;
       }
       #mid {
-        height: auto;
-        width: 90%;
+        height: 800px;
+        width: 80%;
         margin: auto;
-        border: 1px solid red;
+        /* border: 1px solid red; */
+        text-align: center;
       }
       #mid2 {
         height: auto;
@@ -85,6 +189,9 @@
         height: auto;
         width: 90%;
         margin: auto;
+        text-align: left;
+        justify-content: baseline;
+        align-items: baseline;
       }
       #container2mid2 {
         text-align: center;
@@ -106,6 +213,14 @@
         justify-content: center;
         gap: 5px;
       }
+      #footer {
+        display: flex;
+        height: auto;
+        width: 100%;
+        margin: auto;
+        justify-content: space-around;
+        background-color: #ccc;
+      }
     </style>
   </head>
   <body>
@@ -120,17 +235,51 @@
       <div id="nav2">
         <div id="nav2child1">
           <img
+            style
             src="https://assets.website-files.com/60819f9be381394642b5659e/6081a538174f4d6bc01bdd27_leadiq-logo.svg"
           />
         </div>
         <div id="nav2child2">
-          <div id="pal"><p>Platform</p></div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Platform
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-content">
+              <div class="header">
+                <h2>Mega Menu</h2>
+              </div>
+              <div class="row">
+                <div class="column">
+                  <h3>Category 1</h3>
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+                <div class="column">
+                  <h3>Category 2</h3>
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+                <div class="column">
+                  <iframe
+                    src="https://www.youtube.com/embed/aOliIfyH6vI"
+                    height="200"
+                    width="300"
+                    title="Iframe Example"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div><p>Success Stories</p></div>
           <div><p>Resources</p></div>
           <div><p>Pricing</p></div>
         </div>
         <div id="nav2child3">
-          <button>Book a demo</button>
+          <button style="margin-top: 20px">Book a demo</button>
         </div>
       </div>
       <div id="top">
@@ -142,15 +291,16 @@
         </div>
       </div>
       <div id="mid">
-        <!-- <iframe
-          width="400px"
-          height="350px"
-          src="https://youtu.be/vj3lYJJJIU0"
-        ></iframe> -->
-        <img
+        <iframe
+          width="100%"
+          height="100%"
+          style="outline: none"
+          src="https://www.youtube.com/embed/vj3lYJJJIU0"
+        ></iframe>
+        <!-- <img
           src="https://embed-ssl.wistia.com/deliveries/cfde895b5b6e3ad4e2d94fdba605c546.webp?image_crop_resized=1280x720"
           alt="Error"
-        />
+        /> -->
       </div>
       <div id="mid2">
         <div><h1>Too many sellers, send too many messages</h1></div>
@@ -270,6 +420,36 @@
             src="https://assets.website-files.com/60819f9be381394642b5659e/62dc231d8642e948ae1fd974_Bynder-Logo.svg"
             alt=""
           />
+        </div>
+      </div>
+      <div id="footer">
+        <div>
+          <h1>Platform</h1>
+          <p>Identify prospect data</p>
+          <p>Track sales triggers</p>
+          <p>Compose personalized messages</p>
+          <p>Success Stories</p>
+        </div>
+        <div>
+          <h1>Resources</h1>
+          <p>Pricing</p>
+          <p>Blog</p>
+          <p>Support</p>
+          <p>Careers</p>
+          <p>Press</p>
+          <p>Privacy Center</p>
+        </div>
+        <div>
+          <h1>Legal</h1>
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+          <p>Security</p>
+          <p>Do Not Sell My Personal Information</p>
+        </div>
+        <div>
+          <h1>Contact</h1>
+          <p>1-888-653-2347</p>
+          <p>support@leadiq.com</p>
         </div>
       </div>
     </div>

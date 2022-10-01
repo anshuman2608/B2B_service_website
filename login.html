@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        /* border: 1px solid red; */
+        height: auto;
+        width: 500px;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #top {
+        /* border: 1px solid red; */
+        height: 30%;
+        width: 100%;
+        text-align: center;
+      }
+      #mid {
+        /* border: 1px solid red; */
+        height: 60%;
+        width: 100%;
+        text-align: center;
+      }
+      .form {
+        height: 50px;
+        width: 90%;
+
+        margin: auto;
+        margin-top: 15px;
+        justify-content: center;
+        text-align: center;
+      }
+      .inputBox {
+        width: 98%;
+        height: 50px;
+        outline: teal;
+        text-align: center;
+        border: 1px solid teal;
+
+        font-size: large;
+      }
+      .btn {
+        width: 98%;
+        height: 50px;
+        outline: teal;
+        text-align: center;
+        background-color: rgb(215, 187, 187);
+        margin-top: 20px;
+        color: teal;
+
+        font-size: large;
+        border: none;
+      }
+      .btn:hover {
+        color: white;
+        background-color: teal;
+      }
+      #btn1 {
+        padding: 5px;
+        color: white;
+        width: 70%;
+        text-align: center;
+        border: none;
+        height: 40px;
+        font-size: 20px;
+        background-color: #00d586;
+      }
+      body {
+        /* background-color: rgb(190, 224, 190); */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="top">
+        <div>
+          <img
+            src="https://account.leadiq.com/common/img/logo-stripe.529f0a03.png"
+          />
+        </div>
+        <div>
+          <h2>Start your smarter prospecting journey by creating an account</h2>
+        </div>
+        <div><button id="btn1">Sign up</button></div>
+      </div>
+      <div id="mid">
+        <form>
+          <div>
+            <label><h1>Email</h1></label>
+          </div>
+          <div>
+            <input class="inputBox" type="email" placeholder="Enter Email" />
+          </div>
+          <div>
+            <label><h1>Password</h1></label><br />
+          </div>
+          <div>
+            <input
+              class="inputBox"
+              type="password"
+              placeholder="Enter Password"
+            />
+          </div>
+          <div class="form">
+            <input type="submit" value="Login" class="btn" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
