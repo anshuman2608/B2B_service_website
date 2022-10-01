@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        /* border: 1px solid red; */
+        height: auto;
+        width: 500px;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #top {
+        /* border: 1px solid red; */
+
+        height: auto;
+        width: 100%;
+        text-align: center;
+      }
+      #mid {
+        /* border: 1px solid red; */
+        height: auto;
+        width: 100%;
+        text-align: center;
+      }
+      .form {
+        height: 50px;
+        width: 90%;
+
+        margin: auto;
+        margin-top: 15px;
+        justify-content: center;
+        text-align: center;
+      }
+      .inputBox {
+        width: 98%;
+        height: 50px;
+        outline: teal;
+        text-align: center;
+        border: 1px solid teal;
+
+        font-size: large;
+      }
+      .btn {
+        width: 98%;
+        height: 50px;
+        outline: teal;
+        text-align: center;
+        background-color: rgb(192, 170, 170);
+        margin-top: 20px;
+        color: teal;
+
+        font-size: large;
+        border: none;
+      }
+      .btn:hover {
+        color: white;
+        background-color: teal;
+      }
+
+      #topchild1 {
+        height: 60%;
+        width: 25%;
+
+        margin-right: 10px;
+      }
+      #topchild2 {
+        height: 60%;
+        width: 65%;
+
+        margin-left: 10px;
+      }
+      #top2 {
+        display: flex;
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+        align-items: center;
+        text-align: left;
+        margin: auto;
+      }
+      img {
+        margin: auto;
+        text-align: center;
+        margin-left: 20px;
+      }
+      #bottom {
+        text-align: center;
+      }
+      button {
+        padding: 20px;
+        background-color: aqua;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="top">
+        <div>
+          <h1>Welcome to LeadIQ</h1>
+        </div>
+        <div id="top2">
+          <div id="topchild1">
+            <img
+              src="https://account.leadiq.com/signup/assets/welcome.dee70ef2.svg"
+            />
+          </div>
+          <div id="topchild2">
+            <h3>Your improved prospecting process awaits!</h3>
+            <p>
+              LeadIQ makes selling, personalization, and interacting with buyers
+              easier
+            </p>
+          </div>
+        </div>
+
+        <br />
+      </div>
+      <div id="mid">
+        <form>
+          <div>
+            <label class="form" for=""><h1>Full Name</h1></label>
+          </div>
+          <div>
+            <input class="inputBox" type="text" placeholder="Full name" />
+          </div>
+          <div>
+            <label class="form"><h1>Email</h1></label>
+          </div>
+          <div>
+            <input class="inputBox" type="email" placeholder="Enter Email" />
+          </div>
+          <div>
+            <label class="form"><h1>Password</h1></label><br />
+          </div>
+          <div>
+            <input
+              class="inputBox"
+              type="password"
+              placeholder="Enter Password"
+            />
+          </div>
+          <div>
+            <label class="form"><h1>Confirm Password</h1></label><br />
+          </div>
+          <div>
+            <input
+              class="inputBox"
+              type="password"
+              placeholder="Confirm Password"
+            />
+          </div>
+          <div>
+            <input type="submit" value="Continue" class="btn" />
+          </div>
+        </form>
+      </div>
+      <div id="bottom">
+        <h3>Already a user?</h3>
+        <button>Login</button>
+      </div>
+    </div>
+  </body>
+</html>
